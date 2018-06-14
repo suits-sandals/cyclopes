@@ -9,8 +9,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const app = document.getElementsByClassName('app')[0];
+import App from './containers/App.jsx';
 
 
 /**
@@ -18,8 +17,9 @@ const app = document.getElementsByClassName('app')[0];
 */
 
 function init() {
-	let App = require('./containers/App.jsx').default;
 	ReactDOM.render(<App />,  document.getElementById('root'));
 }
+
+
 
 init();

@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 
 gulp.task('build-css', function() {
   var plugins = [
-    autoprefixer({ browsers: 'last 4 versions' }),
+    autoprefixer({ browsers: 'last 3 versions' }),
     cssnano()
   ];
 
