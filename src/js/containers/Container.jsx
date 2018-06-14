@@ -5,7 +5,6 @@
 */
 
 import React, { Component } from 'react';
-
 import Clock from '../components/Clock.jsx';
 
 /**
@@ -20,7 +19,9 @@ class Container extends Component {
 	*/
 
 	render() {
-		<div><Clock /></div>;
+		return (
+			<div><Clock /></div>
+		);	
 	}
 }
 

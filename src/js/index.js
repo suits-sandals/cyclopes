@@ -9,7 +9,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/App.jsx';
+//import App from './containers/App.jsx';
 
 
 /**
@@ -17,6 +17,7 @@ import App from './containers/App.jsx';
 */
 
 function init() {
+	let App = require('./containers/App.jsx').default;
 	ReactDOM.render(<App />,  document.getElementById('root'));
 }
 

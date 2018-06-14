@@ -19,7 +19,7 @@ const App = () => {
 	*/
 
 	return (
-		<div class="app_inside">
+		<div className="app_inside">
 			<Container />
 		</div>
 	);
