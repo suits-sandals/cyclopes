@@ -5,7 +5,10 @@
 */
 
 import React from 'react';
+import {Route, Link, Redirect} from 'react-router-dom';
+
 import Container from './Container.jsx';
+import About from './About.jsx';
 
 /**
 @class App
@@ -20,7 +23,15 @@ const App = () => {
 
 	return (
 		<div className="app_inside">
-			<Container />
+			<nav>
+				<Link to="/home">Home</Link>
+				<Link to="/about">About</Link>
+			</nav>
+			<main>
+				<Redirect from="/" to="/home" />
+				<Route path="/home" component={Container}/>
+				<Route path="/about" component={About}/>
+			</main>
 		</div>
 	);
 };
