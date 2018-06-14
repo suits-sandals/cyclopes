@@ -1,0 +1,159 @@
+/********
+
+Siren Framework v4.1
+
+File Name: Forms
+
+File Purpose: The standard echanced stylings for form elements.
+
+File Notes: 
+
+*********/
+
+
+/*-------------------------*\
+	#Form-Containers
+\*-------------------------*/
+
+form, fieldset{
+	width: 100%;
+}
+
+fieldset {
+	border: none;
+	margin: 1em 0;
+	clear: both;
+	overflow: hidden;
+}
+
+label {
+	font-size: $small;
+	text-transform: uppercase;
+}
+
+
+
+
+
+
+/*-------------------------*\
+	#Inputs-Selects-Textarea
+\*-------------------------*/
+
+input[type="text"], textarea, select {
+	color: $c-highlight-2;
+	font-size: $body;
+	border: 1px $c-highlight-2 solid;
+	padding: 0.5em;
+	width: 100%;
+	outline: none;
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+
+
+
+
+/*-------------------------*\
+	#Inputs
+\*-------------------------*/
+
+input[type="text"] {	
+	line-height: normal;
+
+	&:focus{
+		color: $c-highlight-1;
+	}
+}
+
+
+
+
+
+/*-------------------------*\
+	#Selects
+\*-------------------------*/
+
+select {
+	text-transform: none;
+}
+
+
+
+
+
+/*-------------------------*\
+	#Checkboxes-Radiobuttons
+\*-------------------------*/
+
+input[type="checkbox"], input[type="radio"] {
+	padding: 0;
+}
+
+
+
+/*-------------------------*\
+	#Special-Inputs
+\*-------------------------*/
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+}
+
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+
+
+
+/*-------------------------*\
+	#Textarea
+\*-------------------------*/
+
+textarea {
+	height: 100px;
+	resize: none;
+	overflow: auto;
+}
+
+
+
+
+
+/*-------------------------*\
+	#Submit-Buttons
+\*-------------------------*/
+
+input[type="submit"] {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: $small;
+	letter-spacing: 0.05em;
+	font-weight: bold;
+	color: $c-background;
+	background: $c-highlight-1;
+	transition: all 0.3s;
+	width: auto;
+	display: inline-block;
+	cursor: pointer;
+
+	@include antialias;
+
+	&:hover, &:focus{
+		background: $c-highlight-2;
+	}
+}
+
+button {
+	-webkit-appearance: button; 
+	cursor: pointer;
+	overflow: visible; 
+}
+

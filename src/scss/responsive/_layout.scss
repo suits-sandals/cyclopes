@@ -1,0 +1,154 @@
+/********
+
+Siren Framework v4.0
+
+File Name: Responsive Layout
+
+File Purpose: Responsive Layout
+
+File Notes: 
+
+*********/	
+
+@media only screen and (min-width: 600px) {
+
+	/*-------------------------*\
+		#Container
+	\*-------------------------*/
+	
+	.l-flex {
+		overflow: hidden;
+
+		.flexbox & {
+			overflow: visible;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+
+			&-reverse {
+				flex-direction: row-reverse;
+			}
+		}
+
+		&_col {
+			padding-right: 0.75em;
+			padding-left: 0.75em;
+			float: left;
+			
+			.flexbox & {
+				float: none;
+			}
+
+			&-hlf, &-qtr, &-thrqtr {
+				width: 50%;
+			}
+
+			&-thrd, &-ffth, &-sxth {
+				width: $hundred/3;
+			}
+
+
+		}
+	}
+	
+
+}
+
+
+
+
+
+@media only screen and (min-width: 850px) {
+
+	/*-------------------------*\
+		#Container
+	\*-------------------------*/
+	
+
+	.l-flex {
+
+		&-l {
+			overflow: hidden;
+
+			.flexbox & {
+				overflow: visible;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+			}
+			
+			&_col {
+				float: left;
+				
+				.flexbox & {
+					float: none;
+				}
+
+				&-thrqtr {
+					width: 75%;
+				}
+
+				&-qtr {
+					width: 25%;
+				}
+
+			}
+
+		}
+
+
+		&_col {
+		
+			&-qtr {
+				width: 25%;
+			}
+
+		}
+	}
+	
+
+}
+
+
+
+
+
+@media only screen and (min-width: 1100px) {
+
+	/*-------------------------*\
+		#Container
+	\*-------------------------*/
+	
+
+	.l-flex_col {
+		
+		&-ffth {
+			width: 20%;
+		}
+
+	}
+	
+
+}
+
+
+
+
+
+@media only screen and (min-width: 1200px) {
+
+	/*-------------------------*\
+		#Container
+	\*-------------------------*/
+	
+
+	.l-flex_col {
+		
+		&-sxth {
+			width: $hundred/6;
+		}
+
+	}
+	
+
+}
