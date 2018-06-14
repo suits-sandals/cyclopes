@@ -9,7 +9,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'redux';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom'
 
 import App from './containers/App.jsx';
@@ -23,9 +23,11 @@ import store from './store';
 
 function init() {
 	ReactDOM.render((
+		<Provider store={store}>
 			<BrowserRouter>
 				<App />
 			</BrowserRouter>
+		</Provider>
 	),  document.getElementById('root'));
 }
 
