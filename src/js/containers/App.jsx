@@ -5,10 +5,11 @@
 */
 
 import React from 'react';
-import {Route, Link, Redirect} from 'react-router-dom';
+import {Route, Link, Redirect, Switch} from 'react-router-dom';
 
 import Container from './Container.jsx';
 import About from './About.jsx';
+import ErrorPage from './ErrorPage.jsx';
 
 /**
 @class App
@@ -17,6 +18,7 @@ import About from './About.jsx';
 
 const App = () => {
 
+
 	/**
 	@method return
 	*/
@@ -24,13 +26,15 @@ const App = () => {
 	return (
 		<div className="app_inside">
 			<nav>
-				<Link to="/home">Home</Link>
+				<Link to="/">Home</Link>
 				<Link to="/about">About</Link>
 			</nav>
 			<main>
-				<Redirect from="/" to="/home" />
-				<Route path="/home" component={Container}/>
-				<Route path="/about" component={About}/>
+				<Switch>
+					<Route exact path="/" component={Container}/>
+					<Route path="/about" component={About}/>
+					<Route path="*" component={ErrorPage}/>
+				</Switch>
 			</main>
 		</div>
 	);
