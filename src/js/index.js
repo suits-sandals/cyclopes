@@ -12,20 +12,22 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
+import { persistStore } from 'redux-persist';
 
 import App from './containers/App.jsx';
 
-import {store, persistor} from './store';
+import store from './store';
 
 
 /**
 @method init
 */
 
-/*function init() {
+
+function init() {
 	ReactDOM.render((
 		<Provider store={store}>
-			<PersistGate loading={null} persistor={persistor}>
+			<PersistGate loading={null} persistor={persistStore(store)}>
 				<BrowserRouter>
 					<App />
 				</BrowserRouter>
@@ -33,18 +35,6 @@ import {store, persistor} from './store';
 		</Provider>
 	),  document.getElementById('root'));
 }
-*/
-
-/*function init() {
-	ReactDOM.render((
-		<Provider store={store}>
-			<BrowserRouter>
-				<App />
-			</BrowserRouter>
-		</Provider>
-	),  document.getElementById('root'));
-}
-*/
 
 
 init();

@@ -7,7 +7,7 @@ import message from './message';
 // router state
 const rootReducer = combineReducers({
 	sample,
-	message
+	message,
 });
 
 export default rootReducer;
