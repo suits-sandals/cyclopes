@@ -1,11 +1,11 @@
 // Set this to true for production
-var doCache = true;
+var doCache = false;
 
 // Name our cache
-var CACHE_NAME = 'my-pwa-cache-v1';
+var CACHE_NAME = 'cyclopses-cache-v1';
 
 // Delete old caches that are not our current one!
-/*self.addEventListener("activate", event => {
+self.addEventListener("activate", event => {
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
     caches.keys()
@@ -18,10 +18,10 @@ var CACHE_NAME = 'my-pwa-cache-v1';
         }))
       )
   );
-});*/
+});
 
 // The first time the user starts up the PWA, 'install' is triggered.
-/*self.addEventListener('install', function(event) {
+self.addEventListener('install', function(event) {
   if (doCache) {
     event.waitUntil(
       caches.open(CACHE_NAME)
@@ -38,7 +38,7 @@ var CACHE_NAME = 'my-pwa-cache-v1';
               // We could also cache any static assets like CSS or images
               const urlsToCache = [
                 "/",
-                assets["main.js"]
+                assets["app.bundle.js", "style.css"]
               ]
               cache.addAll(urlsToCache)
               console.log('cached');
@@ -46,7 +46,7 @@ var CACHE_NAME = 'my-pwa-cache-v1';
         })
     );
   }
-});*/
+});
 
 // When the webpage goes to fetch files, we intercept that request and serve up the matching files
 // if we have them
