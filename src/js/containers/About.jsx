@@ -5,6 +5,7 @@
 */
 
 import React, { Component } from 'react';
+import {Helmet} from "react-helmet";
 
 /**
 @class About
@@ -19,7 +20,12 @@ class About extends Component {
 
 	render() {
 		return (
-			<div>Cyclopes is a quick start kit for React with Redux.</div>
+			<div>
+				<Helmet>
+	                <title>About - Cyclopes</title>
+	            </Helmet>
+				<div>Cyclopes is a quick start kit for React with Redux.</div>
+			</div>
 		);	
 	}
 }

@@ -5,6 +5,7 @@
 */
 
 import React, { Component } from 'react';
+import {Helmet} from "react-helmet";
 
 /**
 @class About
@@ -20,7 +21,11 @@ class ErrorPage extends Component {
 	render() {
 		return (
 			<div>
+				<Helmet>
+	                <title>404 - Cyclopes</title>
+	            </Helmet>
 				<h1>404</h1> 
+				<p>Sorry, {window.location.href } is not a page.</p>
 			</div>
 		);	
 	}

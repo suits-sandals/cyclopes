@@ -5,6 +5,7 @@
 */
 
 import React, { Component } from 'react';
+import {Helmet} from "react-helmet";
 import Clock from '../components/Clock.jsx';
 
 /**
@@ -20,7 +21,12 @@ class Container extends Component {
 
 	render() {
 		return (
-			<div><Clock /></div>
+			<div>
+				<Helmet>
+	                <title>Sample Page - Cyclopes</title>
+	            </Helmet>
+				<Clock />
+			</div>
 		);	
 	}
 }

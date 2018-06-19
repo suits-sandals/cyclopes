@@ -1,7 +1,5 @@
 import request from 'axios';
 import * as types from '../types';
-var converter = require('json-2-csv');
-var FileSaver = require('file-saver');
 
 
 
