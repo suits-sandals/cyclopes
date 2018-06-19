@@ -56,12 +56,11 @@ export function sampleAction(data) {
 
 
 	return request(authOptions).then(response => {
-	  dispatch(gsampleActionSuccess(response.data));
+	  dispatch(sampleActionSuccess(response.data));
 	}).catch(err => {
 	  dispatch(sampleActionError());
 	});
 
-	
 
   }
 }

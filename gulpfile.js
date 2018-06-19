@@ -38,7 +38,7 @@ gulp.task('build-js', function(callback) {
 });
 
 
-/* HTML */
+/* Base */
 
 gulp.task('move-base', function(callback) {
   return gulp
