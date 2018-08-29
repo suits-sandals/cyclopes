@@ -9,7 +9,7 @@ Any questions or inquiries about the services Suits & Sandals provides can be di
 
 ## Quick Start Development ##
 
-1. Run "npm install" while in route directory
+1. Run "npm install" while in root directory
 2. Run "npm run build" to build the "compiled" directory
 3. Rename "htaccess", in "src" to ".hataccess"
 4. Move ".htaccess" to the "compiled" directory
